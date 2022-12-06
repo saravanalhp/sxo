@@ -9,19 +9,6 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "Email Template",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_021XB6EUODB5O3dqUmu1BsCUvwrtrcpaoLJ",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
           "value": "Bearer ",
           "scope": "input",
           "name": "Provide Token include Bearer",
@@ -30,6 +17,71 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_021XB6EUODJPK42JBbrj4FIGNxKmP7tPu2g",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Provide GIT Token Password",
+          "type": "datatype.secure_string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021XB6EUODWO23SeeE1BPWtSC3BRvVfu0IO",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "Condition Block 1",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021XB6EUOEA691h3RoYXMLiwaT2fWTLztLO",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Authorization",
+          "scope": "local",
+          "name": "Authorization",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021XB6EUODQCS7bniijMp2uvUwPCdTBjQZK",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "Pass Value",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021XB6EUOD0QV54V6zV0uGB4s4G5Rx3ZBnN",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "Email Template",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021XB6EUODB5O3dqUmu1BsCUvwrtrcpaoLJ",
         "object_type": "variable_workflow"
       },
       {
@@ -56,58 +108,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_021XB6EUOEGWC5XCVaigBqRJds5cm01ngg7",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "Condition Block 1",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_021XB6EUOEA691h3RoYXMLiwaT2fWTLztLO",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "Pass Value",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_021XB6EUOD0QV54V6zV0uGB4s4G5Rx3ZBnN",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Authorization",
-          "scope": "local",
-          "name": "Authorization",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_021XB6EUODQCS7bniijMp2uvUwPCdTBjQZK",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.secure_string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "Provide GIT Token Password",
-          "type": "datatype.secure_string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_021XB6EUODWO23SeeE1BPWtSC3BRvVfu0IO",
         "object_type": "variable_workflow"
       }
     ],
