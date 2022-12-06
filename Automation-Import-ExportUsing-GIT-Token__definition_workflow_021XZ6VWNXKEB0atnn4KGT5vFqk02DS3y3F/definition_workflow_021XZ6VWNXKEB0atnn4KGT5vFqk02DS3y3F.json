@@ -9,66 +9,14 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "Condition Block 1",
+          "value": "Authorization",
+          "scope": "local",
+          "name": "Authorization",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_021XZ6VWWX74H7hsMJruj9BS2Mh4vlDrqek",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.secure_string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "Provide GIT Token Password",
-          "type": "datatype.secure_string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_021XZ6VWWY66Q6JUJdYQM8YuRbqb9ZhQuxN",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "Pass Value",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_021XZ6VWWXQWO1OhLkNnRAp4BeX1LGAHVDY",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Bearer ",
-          "scope": "input",
-          "name": "Provide Token include Bearer",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_021XZ6VWWYNRD2DGDv6jQlUdyMIkPk5e5tr",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "Email Template",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_021XZ6VWWXHDE1WhQSRHLluYrkO7nfOJz2w",
+        "unique_name": "variable_workflow_021XZ6VWWXYOO3T0ibmFQgsRTdZjpqPr19b",
         "object_type": "variable_workflow"
       },
       {
@@ -89,6 +37,58 @@
         "properties": {
           "value": "",
           "scope": "output",
+          "name": "Pass Value",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021XZ6VWWXQWO1OhLkNnRAp4BeX1LGAHVDY",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Provide GIT Token Password",
+          "type": "datatype.secure_string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021XZ6VWWY66Q6JUJdYQM8YuRbqb9ZhQuxN",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "Email Template",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021XZ6VWWXHDE1WhQSRHLluYrkO7nfOJz2w",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Bearer ",
+          "scope": "input",
+          "name": "Provide Token include Bearer",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021XZ6VWWYNRD2DGDv6jQlUdyMIkPk5e5tr",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
           "name": "All Action True/False",
           "type": "datatype.string",
           "is_required": false,
@@ -100,14 +100,27 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "Authorization",
-          "scope": "local",
-          "name": "Authorization",
+          "value": "",
+          "scope": "output",
+          "name": "Condition Block 1",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_021XZ6VWWXYOO3T0ibmFQgsRTdZjpqPr19b",
+        "unique_name": "variable_workflow_021XZ6VWWX74H7hsMJruj9BS2Mh4vlDrqek",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "*****",
+          "scope": "local",
+          "name": "securestring",
+          "type": "datatype.secure_string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021XZ7TEZ53KG6OcQ9pSwaLegA5WWf60Yk5",
         "object_type": "variable_workflow"
       }
     ],
