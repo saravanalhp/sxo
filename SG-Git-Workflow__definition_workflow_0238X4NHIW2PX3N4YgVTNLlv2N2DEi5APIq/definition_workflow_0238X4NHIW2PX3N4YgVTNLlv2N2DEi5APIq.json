@@ -34,6 +34,20 @@
           "sleep_interval": 2
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_0238X57Z9F9Y52pV9hXlXHRhuCHDHqtjA1w",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "$workflow.definition_workflow_0238X4NHIW2PX3N4YgVTNLlv2N2DEi5APIq.output.started_by$"
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
