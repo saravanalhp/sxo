@@ -1,0 +1,139 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01XPQJ2EI0CEG1BujNAiGiXXVdPAjlZRjJv",
+    "name": "SG-TestSchedule",
+    "title": "SG-TestSchedule",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "SG-TestSchedule",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01XPQJCEN4HCB5Uc8CP8JCGGUKJ2f67ksSn",
+        "name": "SG-SubAtomic-21628",
+        "title": "SG-SubAtomic-21628",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "SG-SubAtomic-21628",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_01XORQ8ABYWCU5B7QDC1gXEgEj7F8vZI8v1",
+          "workflow_name": "SG-SubAtomic-21628"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "triggers": {
+    "triggerschedule_01XPQJVSZUMUC7mXwFIwXZEnpn4CPKjLA2Q": {
+      "workflow_id": "definition_workflow_01XPQJ2EI0CEG1BujNAiGiXXVdPAjlZRjJv",
+      "name": "SG-ScheduleTrigger",
+      "title": "",
+      "lowercase_name": "schedule.sg-scheduletrigger",
+      "type": "schedule",
+      "base_type": "trigger",
+      "ref_id": "schedule_01XPQIYU9F30324wwi0t7NJ6P3w36CjqIZN",
+      "version": "1.0.0",
+      "disabled": false,
+      "unique_name": "triggerschedule_01XPQJVSZUMUC7mXwFIwXZEnpn4CPKjLA2Q",
+      "object_type": "triggerschedule"
+    },
+    "triggerschedule_01Y7N2XNL8KMI6u3OMOvjREkZmB7RXfz13y": {
+      "workflow_id": "definition_workflow_01XPQJ2EI0CEG1BujNAiGiXXVdPAjlZRjJv",
+      "name": "SG-Jul1-Trigger",
+      "title": "",
+      "lowercase_name": "schedule.sg-jul1-trigger",
+      "type": "schedule",
+      "base_type": "trigger",
+      "ref_id": "schedule_01Y7N2GR7S9QE4qOsBbPUzb9xDMbI5YOshz",
+      "version": "1.0.0",
+      "disabled": false,
+      "unique_name": "triggerschedule_01Y7N2XNL8KMI6u3OMOvjREkZmB7RXfz13y",
+      "object_type": "triggerschedule"
+    }
+  },
+  "schedules": {
+    "schedule_01XPQIYU9F30324wwi0t7NJ6P3w36CjqIZN": {
+      "unique_name": "schedule_01XPQIYU9F30324wwi0t7NJ6P3w36CjqIZN",
+      "name": "SG-GenericSchedule-2Times-5mins",
+      "type": "basic.schedule",
+      "base_type": "schedule",
+      "object_type": "schedule",
+      "rule_id": "",
+      "properties": {
+        "calendar": "calendar_datelist_024R6NJ82S5TC2OzfzGqnFjkQ93skgyZOkw",
+        "timezone": "Asia/Kolkata",
+        "starttime": "22:55",
+        "interval_hours": 0,
+        "interval_minutes": 5,
+        "number_of_times": 2,
+        "display_name": "SG-GenericSchedule-2Times-5mins",
+        "description": ""
+      },
+      "version": "1.0.0"
+    },
+    "schedule_01Y7N2GR7S9QE4qOsBbPUzb9xDMbI5YOshz": {
+      "unique_name": "schedule_01Y7N2GR7S9QE4qOsBbPUzb9xDMbI5YOshz",
+      "name": "SG-Schedule-Daily-2135IST",
+      "type": "basic.schedule",
+      "base_type": "schedule",
+      "object_type": "schedule",
+      "rule_id": "",
+      "properties": {
+        "calendar": "calendar_recurring_1BMfMWvgiDhSjBQ7hTSyvz3NyVZ",
+        "timezone": "Asia/Kolkata",
+        "starttime": "21:35",
+        "interval_hours": 0,
+        "interval_minutes": 1,
+        "number_of_times": 2,
+        "display_name": "SG-Schedule-Daily-2135IST",
+        "description": ""
+      },
+      "version": "1.0.0"
+    }
+  },
+  "calendars": {
+    "calendar_datelist_024R6NJ82S5TC2OzfzGqnFjkQ93skgyZOkw": {
+      "unique_name": "calendar_datelist_024R6NJ82S5TC2OzfzGqnFjkQ93skgyZOkw",
+      "name": "SG-4-apr-5apr",
+      "title": "SG-4-apr-5apr",
+      "base_type": "calendar",
+      "type": "calendar.datelist",
+      "properties": {
+        "date_list": [
+          "2023-04-04",
+          "2023-04-05"
+        ]
+      },
+      "version": "1.0.0",
+      "object_type": "calendar_datelist"
+    }
+  },
+  "atomic_workflows": [
+    "definition_workflow_01XORQ8ABYWCU5B7QDC1gXEgEj7F8vZI8v1"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_01XORQ8ABYWCU5B7QDC1gXEgEj7F8vZI8v1"
+  ]
+}
