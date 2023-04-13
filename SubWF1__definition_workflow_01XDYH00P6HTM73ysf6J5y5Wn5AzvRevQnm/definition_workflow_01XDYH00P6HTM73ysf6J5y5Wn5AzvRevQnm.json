@@ -79,6 +79,20 @@
         "object_type": "definition_activity"
       },
       {
+        "unique_name": "definition_activity_024YQHVIIVNAL23O0a5qfyHC5H9GVs2CRcw",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "$activity.definition_activity_01XDYH776ARM76DLFBi2fCyvUrDVjxhrwJb.output.variable_workflow_01XDYDI1UNJWT6vBGXLkbMUZmaFgYZ0AsSo$"
+        },
+        "object_type": "definition_activity"
+      },
+      {
         "unique_name": "definition_activity_01XDYHBO1D6NB1FqpsPlEDMAS51q2gUzsDp",
         "name": "Completed",
         "title": "Completed",
@@ -1406,6 +1420,33 @@
                 "base_type": "workflow",
                 "variables": [
                   {
+                    "schema_id": "datatype.secure_string",
+                    "properties": {
+                      "value": "*****",
+                      "scope": "static",
+                      "name": "SecureString",
+                      "type": "datatype.secure_string",
+                      "description": "Secured",
+                      "is_required": false,
+                      "is_invisible": false
+                    },
+                    "unique_name": "variable_workflow_01XDY9POEON3N0x9rCxYLzyr96Pym0vDtUP",
+                    "object_type": "variable_workflow"
+                  },
+                  {
+                    "schema_id": "datatype.string",
+                    "properties": {
+                      "value": "",
+                      "scope": "output",
+                      "name": "Level",
+                      "type": "datatype.string",
+                      "is_required": false,
+                      "is_invisible": false
+                    },
+                    "unique_name": "variable_workflow_01XDVIPGUAJBR0HFTqTeZMcqwENscjIBzxg",
+                    "object_type": "variable_workflow"
+                  },
+                  {
                     "schema_id": "datatype.string",
                     "properties": {
                       "value": "Level-4-Static-Variable",
@@ -1430,33 +1471,6 @@
                       "is_invisible": false
                     },
                     "unique_name": "variable_workflow_01XDYATS85E9R1w7hzCcHa7ArJKYKaA5YXm",
-                    "object_type": "variable_workflow"
-                  },
-                  {
-                    "schema_id": "datatype.string",
-                    "properties": {
-                      "value": "",
-                      "scope": "output",
-                      "name": "Level",
-                      "type": "datatype.string",
-                      "is_required": false,
-                      "is_invisible": false
-                    },
-                    "unique_name": "variable_workflow_01XDVIPGUAJBR0HFTqTeZMcqwENscjIBzxg",
-                    "object_type": "variable_workflow"
-                  },
-                  {
-                    "schema_id": "datatype.secure_string",
-                    "properties": {
-                      "value": "*****",
-                      "scope": "static",
-                      "name": "SecureString",
-                      "type": "datatype.secure_string",
-                      "description": "Secured",
-                      "is_required": false,
-                      "is_invisible": false
-                    },
-                    "unique_name": "variable_workflow_01XDY9POEON3N0x9rCxYLzyr96Pym0vDtUP",
                     "object_type": "variable_workflow"
                   }
                 ],
@@ -1563,6 +1577,27 @@
                       }
                     },
                     "object_type": "definition_workflow",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01XDVHPM1C99D1IJh1BiYbyR97guMEpGhap",
+                        "name": "Set Variables",
+                        "title": "Set Level Variables",
+                        "type": "core.set_multiple_variables",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Set Level Variables",
+                          "skip_execution": false,
+                          "variables_to_update": [
+                            {
+                              "variable_to_update": "$workflow.definition_workflow_01XDVH8EYVL2523icuDVx2kV1V09AxRlHck.output.variable_workflow_01XDVHVJXA3P44zoKQwsNtBqEK4dY0tYT6x$",
+                              "variable_value_new": "Level-5"
+                            }
+                          ]
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ],
                     "categories": [
                       "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
                     ]
