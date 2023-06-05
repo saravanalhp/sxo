@@ -1,24 +1,11 @@
 {
   "workflow": {
     "unique_name": "definition_workflow_02683NDI5X5PC0Etb0qppFkaHr2Vr9oCHme",
-    "name": "Copy(1)-SentinelOne Get Agents SXO API Target",
-    "title": "Copy(1)-SentinelOne Get Agents SXO API Target",
+    "name": "SG-SentinelOne Get Agents SXO API Target-New",
+    "title": "SG-SentinelOne Get Agents SXO API Target-New",
     "type": "generic.workflow",
     "base_type": "workflow",
     "variables": [
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "ConditionBlock",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_02683NDIEKC1E1LoNo1nar8w2pHimT9IRM1",
-        "object_type": "variable_workflow"
-      },
       {
         "schema_id": "datatype.secure_string",
         "properties": {
@@ -31,6 +18,19 @@
         },
         "unique_name": "variable_workflow_02683NDIEK0LF1cA6iwvSp1XJAdhMZhc0nK",
         "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "ConditionBlock",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02683NDIEKC1E1LoNo1nar8w2pHimT9IRM1",
+        "object_type": "variable_workflow"
       }
     ],
     "properties": {
@@ -38,7 +38,7 @@
         "is_atomic": false
       },
       "delete_workflow_instance": false,
-      "display_name": "Copy(1)-SentinelOne Get Agents SXO API Target",
+      "display_name": "SG-SentinelOne Get Agents SXO API Target-New",
       "runtime_user": {
         "target_default": true
       },
@@ -566,27 +566,14 @@
           {
             "schema_id": "datatype.string",
             "properties": {
-              "value": "Authorization",
-              "scope": "local",
-              "name": "Authorization",
-              "type": "datatype.string",
-              "is_required": false,
-              "is_invisible": false
-            },
-            "unique_name": "variable_workflow_02683NDL46TWH0eVa3hq2fqzfn6ccMj1r35",
-            "object_type": "variable_workflow"
-          },
-          {
-            "schema_id": "datatype.string",
-            "properties": {
               "value": "",
               "scope": "output",
-              "name": "Condition Block 2",
+              "name": "Condition Block 1",
               "type": "datatype.string",
               "is_required": false,
               "is_invisible": false
             },
-            "unique_name": "variable_workflow_02683NDL46L1E1uO9WO3zjVFrt6KMWiBzko",
+            "unique_name": "variable_workflow_02683NDL4623O4hgQ3NZ1rSGO3A4vbKUl3t",
             "object_type": "variable_workflow"
           },
           {
@@ -620,14 +607,14 @@
           {
             "schema_id": "datatype.string",
             "properties": {
-              "value": "",
-              "scope": "output",
-              "name": "Condition Block 1",
+              "value": "Authorization",
+              "scope": "local",
+              "name": "Authorization",
               "type": "datatype.string",
               "is_required": false,
               "is_invisible": false
             },
-            "unique_name": "variable_workflow_02683NDL4623O4hgQ3NZ1rSGO3A4vbKUl3t",
+            "unique_name": "variable_workflow_02683NDL46TWH0eVa3hq2fqzfn6ccMj1r35",
             "object_type": "variable_workflow"
           },
           {
@@ -641,6 +628,19 @@
               "is_invisible": false
             },
             "unique_name": "variable_workflow_02683NDL45QMC7Sve2pQYCWSbSEVrJk6AP9",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "Condition Block 2",
+              "type": "datatype.string",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_02683NDL46L1E1uO9WO3zjVFrt6KMWiBzko",
             "object_type": "variable_workflow"
           }
         ],
