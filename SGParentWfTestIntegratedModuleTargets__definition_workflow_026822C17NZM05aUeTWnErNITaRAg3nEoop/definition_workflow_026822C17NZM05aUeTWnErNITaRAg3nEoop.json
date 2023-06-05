@@ -102,6 +102,20 @@
           ]
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_02682KWMH83HT552q4Ph9rhY82RLUXQ36R0",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "$activity.definition_activity_026822C6KTJGC4d7fIHKXJwwiCRfyFp3qWh.output.variable_workflow_021MUTEKSVYN11FuMjcX3mM9O5tmJA9tHQr$"
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
@@ -267,20 +281,6 @@
         "base_type": "workflow",
         "variables": [
           {
-            "schema_id": "datatype.secure_string",
-            "properties": {
-              "value": "",
-              "scope": "local",
-              "name": "Meraki API Key",
-              "type": "datatype.secure_string",
-              "description": "Your Meraki API key. This can be generated in your Meraki dashboard",
-              "is_required": false,
-              "is_invisible": false
-            },
-            "unique_name": "variable_workflow_021MUTEKSW8TU1hkj1FbQaCGNSIY7tHG4Ig",
-            "object_type": "variable_workflow"
-          },
-          {
             "schema_id": "datatype.string",
             "properties": {
               "value": "",
@@ -292,6 +292,20 @@
               "is_invisible": false
             },
             "unique_name": "variable_workflow_021MUTEKSVYN11FuMjcX3mM9O5tmJA9tHQr",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.secure_string",
+            "properties": {
+              "value": "",
+              "scope": "local",
+              "name": "Meraki API Key",
+              "type": "datatype.secure_string",
+              "description": "Your Meraki API key. This can be generated in your Meraki dashboard",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_021MUTEKSW8TU1hkj1FbQaCGNSIY7tHG4Ig",
             "object_type": "variable_workflow"
           }
         ],
