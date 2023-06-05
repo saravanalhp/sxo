@@ -30,13 +30,13 @@
     "actions": [
       {
         "unique_name": "definition_activity_026822C4WKQDU3hq5XGnEUjTnyoVxN8GcJO",
-        "name": "NK_TestSecureEndpoint",
-        "title": "NK_TestSecureEndpoint",
+        "name": "SG_TestSecureEndpoint",
+        "title": "SG_TestSecureEndpoint",
         "type": "workflow.sub_workflow",
         "base_type": "subworkflow",
         "properties": {
           "continue_on_failure": true,
-          "display_name": "NK_TestSecureEndpoint",
+          "display_name": "SG_TestSecureEndpoint",
           "runtime_user": {
             "target_default": true
           },
