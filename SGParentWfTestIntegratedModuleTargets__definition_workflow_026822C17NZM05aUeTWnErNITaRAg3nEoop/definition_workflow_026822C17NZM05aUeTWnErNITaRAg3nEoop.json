@@ -83,6 +83,25 @@
           "workflow_name": "NK_Meraki - Get Organizations"
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_02682BKRBSZZN4IhsccjIz5JJkoDSGb2QjO",
+        "name": "Set Variables",
+        "title": "Set Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set Variables",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_026822C17NZM05aUeTWnErNITaRAg3nEoop.input.variable_workflow_02682B8CKMP055afOwYaW4Ah8I64tuQDNMa$",
+              "variable_value_new": "$activity.definition_activity_026822C6KTJGC4d7fIHKXJwwiCRfyFp3qWh.output.variable_workflow_021MUTEKSVYN11FuMjcX3mM9O5tmJA9tHQr$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
