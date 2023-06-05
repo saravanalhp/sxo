@@ -1,0 +1,572 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_026822C17NZM05aUeTWnErNITaRAg3nEoop",
+    "name": "SG_ParentWf_TestIntegratedModuleTargets",
+    "title": "SG_ParentWf_TestIntegratedModuleTargets",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "SG_ParentWf_TestIntegratedModuleTargets",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": true,
+        "target_group": {
+          "target_group_id": "target_group_021XKKRLOWOMT5pdNRcxFe54DWmvpGh8DOY",
+          "run_on_all_targets": true,
+          "selected_target_types": [
+            "web-service.endpoint"
+          ]
+        }
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_026822C4WKQDU3hq5XGnEUjTnyoVxN8GcJO",
+        "name": "NK_TestSecureEndpoint",
+        "title": "NK_TestSecureEndpoint",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": true,
+          "display_name": "NK_TestSecureEndpoint",
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_021WRIUS0H41T1VL6Qellzxpx4ZFNzPUgEW",
+          "workflow_name": "SG_TestSecureEndpoint"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_026822C6KTJGC4d7fIHKXJwwiCRfyFp3qWh",
+        "name": "NK_Meraki - Get Organizations",
+        "title": "NK_Meraki - Get Organizations",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "NK_Meraki - Get Organizations",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "execute_on_this_target": true,
+            "target_id": "$module_target;Meraki;securex:ao:meraki$",
+            "target_type": "web-service.endpoint"
+          },
+          "workflow_id": "definition_workflow_021MUTEKKIVT02pkFtxvriF9aypR9eAVmXu",
+          "workflow_name": "NK_Meraki - Get Organizations"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_021WSVAG5IFKW1PuE1lQq9bPa5lGmFlvV5c": {
+      "unique_name": "definition_target_021WSVAG5IFKW1PuE1lQq9bPa5lGmFlvV5c",
+      "name": "Secure Endpoint - Edited Name - v1",
+      "title": "Secure Endpoint - Edited Name - v1",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "disable_certificate_validation": false,
+        "display_name": "Secure Endpoint - Edited Name - v1",
+        "host": "api.qa1.immunet.com",
+        "ignore_proxy": true,
+        "no_runtime_user": true,
+        "path": "/v1",
+        "protocol": "https"
+      }
+    },
+    "definition_target_021XKCAFJZMST1EMTzatBm9ejn5kqRIW1G5": {
+      "unique_name": "definition_target_021XKCAFJZMST1EMTzatBm9ejn5kqRIW1G5",
+      "name": "NK_1Meraki_Valid_6Dec",
+      "title": "NK_1Meraki_Valid_6Dec",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "description": "The Meraki dashboard API is an interface for software to interact directly with the Meraki cloud platform and Meraki-managed devices",
+        "disable_certificate_validation": false,
+        "display_name": "NK_1Meraki_Valid_6Dec",
+        "host": "api.meraki.com",
+        "ignore_proxy": true,
+        "no_runtime_user": true,
+        "path": "/api",
+        "protocol": "https"
+      }
+    },
+    "definition_target_021XKCVRMSEEH0KT9EeKJJxhXwgDufpBmZh": {
+      "unique_name": "definition_target_021XKCVRMSEEH0KT9EeKJJxhXwgDufpBmZh",
+      "name": "NK_1Meraki_Valid1_6Dec",
+      "title": "NK_1Meraki_Valid1_6Dec",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "description": "The Meraki dashboard API is an interface for software to interact directly with the Meraki cloud platform and Meraki-managed devices",
+        "disable_certificate_validation": false,
+        "display_name": "NK_1Meraki_Valid1_6Dec",
+        "host": "api.meraki.com",
+        "ignore_proxy": true,
+        "no_runtime_user": true,
+        "path": "/api",
+        "protocol": "https"
+      }
+    }
+  },
+  "target_groups": {
+    "target_group_021XKKRLOWOMT5pdNRcxFe54DWmvpGh8DOY": {
+      "unique_name": "target_group_021XKKRLOWOMT5pdNRcxFe54DWmvpGh8DOY",
+      "name": "NK_TG_IntegratedModules",
+      "title": "NK_TG_IntegratedModules",
+      "type": "generic.target_group",
+      "base_type": "target_group",
+      "version": "1.0.0",
+      "targets": [
+        {
+          "data_target_type": "web-service.endpoint",
+          "view_target_type": "web-service.endpoint",
+          "include_all_targets": false,
+          "selected_target_ids": [
+            "definition_target_021WSVAG5IFKW1PuE1lQq9bPa5lGmFlvV5c"
+          ],
+          "criteria": [
+            {
+              "operator": "mw",
+              "left_operand": "$input.display_name$",
+              "right_operand": "NK*"
+            }
+          ]
+        }
+      ],
+      "object_type": "target_group"
+    }
+  },
+  "subworkflows": [
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_021WRIUS0H41T1VL6Qellzxpx4ZFNzPUgEW",
+        "name": "SG_TestSecureEndpoint",
+        "title": "SG_TestSecureEndpoint",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": null,
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "display_name": "SG_TestSecureEndpoint",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_021WRJ11N148411MkWY5QYnbAE2moioYzhp",
+            "name": "Secure Endpoint - Get Events",
+            "title": "Secure Endpoint - Get Events",
+            "type": "workflow.atomic_workflow",
+            "base_type": "subworkflow",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Secure Endpoint - Get Events",
+              "input": {
+                "variable_workflow_01PP76FTIW76B6i8dsARoetEFjDV8PeExbc": "2022-02-02T00:00:00+00:00",
+                "variable_workflow_01PP76FTIWBEE1vRRgKYgDMpmua9alDz5oL": 0,
+                "variable_workflow_01PP76FTIWCO51PbmnWtoPn7UnPPlCWmcKk": "",
+                "variable_workflow_01PP76FTIWF081mpPdgdyGqtRJNVgp4aXvk": "",
+                "variable_workflow_01PP76FTIWGCY73dmexNMVLCN0ZHBBhBW4d": "",
+                "variable_workflow_01PP76FTIWHIT3p0c53p7gngfiLbXG6T3YX": 100
+              },
+              "runtime_user": {
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_021WSVAG5IFKW1PuE1lQq9bPa5lGmFlvV5c",
+                "target_type": "web-service.endpoint"
+              },
+              "workflow_id": "definition_workflow_01PP76FTQKEYW2dg8RXriNAf2EkkZ4Agqg9",
+              "workflow_name": "Secure Endpoint - Get Events"
+            },
+            "object_type": "definition_activity"
+          }
+        ],
+        "categories": [
+          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+        ]
+      },
+      "atomic_workflows": [
+        "definition_workflow_01PP76FTQKEYW2dg8RXriNAf2EkkZ4Agqg9"
+      ],
+      "dependent_workflows": [
+        "definition_workflow_01PP76FTQKEYW2dg8RXriNAf2EkkZ4Agqg9"
+      ]
+    },
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_021MUTEKKIVT02pkFtxvriF9aypR9eAVmXu",
+        "name": "NK_Meraki - Get Organizations",
+        "title": "NK_Meraki - Get Organizations",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": [
+          {
+            "schema_id": "datatype.secure_string",
+            "properties": {
+              "value": "",
+              "scope": "local",
+              "name": "Meraki API Key",
+              "type": "datatype.secure_string",
+              "description": "Your Meraki API key. This can be generated in your Meraki dashboard",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_021MUTEKSW8TU1hkj1FbQaCGNSIY7tHG4Ig",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "Organization List",
+              "type": "datatype.string",
+              "description": "The list of organizations the API key provided has access to",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_021MUTEKSVYN11FuMjcX3mM9O5tmJA9tHQr",
+            "object_type": "variable_workflow"
+          }
+        ],
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "description": "Gets a list of Cisco Meraki organizations that the API key provided has access to.\n\nTarget: HTTP Endpoint for \"api.meraki.com\" with a path of \"/api\"\n\nAccount Key: None (uses an API key)\n\nSteps:\n[] Request a list of organizations\n[] Check if the request was successful:\n[]\u003e If it was, set the output variable\n[]\u003e If it wasn't, return an error\n\nMore information about this API: https://developer.cisco.com/meraki/api-v1/#!get-organizations",
+          "display_name": "NK_Meraki - Get Organizations",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "target_type": "web-service.endpoint",
+            "target_id": "$module_target;Meraki;securex:ao:meraki$",
+            "execute_on_workflow_target": true
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_021ULP7PFGWBI7V40z49TqUuWVapNQQSHIa",
+            "name": "Group",
+            "title": "Use Meraki Integrated target",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Use Meraki Integrated target",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_021MUTEORLRPZ7LzstKdxum1N0iy0SWScN8",
+                "name": "HTTP Request",
+                "title": "Get the organization list",
+                "type": "web-service.http_request",
+                "base_type": "activity",
+                "properties": {
+                  "accept": "application/json",
+                  "action_timeout": 180,
+                  "allow_auto_redirect": true,
+                  "allow_headers_redirect": false,
+                  "content_type": "application/json",
+                  "continue_on_error_status_code": true,
+                  "continue_on_failure": false,
+                  "display_name": "Get the organization list",
+                  "method": "GET",
+                  "relative_url": "v1/organizations",
+                  "runtime_user": {
+                    "override_target_runtime_user": false,
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "override_workflow_target": true,
+                    "target_id": "definition_target_021XKCAFJZMST1EMTzatBm9ejn5kqRIW1G5"
+                  }
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_021MUTEPPSYIZ2bvW70AVxtnE9EQfu0vfT8",
+                "name": "Condition Block",
+                "title": "Was the request successful?",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Was the request successful?",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_021MUTEQMCU781moV1Ry9dE3Qat2nUeSW2L",
+                    "name": "Condition Branch",
+                    "title": "200/Success",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_021MUTEORLRPZ7LzstKdxum1N0iy0SWScN8.output.status_code$",
+                        "operator": "eq",
+                        "right_operand": 200
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "200/Success",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_021MUTES8RNDA6GmSd4X9J0fVbLJeTy0Fc7",
+                        "name": "Set Variables",
+                        "title": "Set output variable",
+                        "type": "core.set_multiple_variables",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Set output variable",
+                          "skip_execution": false,
+                          "variables_to_update": [
+                            {
+                              "variable_to_update": "$workflow.definition_workflow_021MUTEKKIVT02pkFtxvriF9aypR9eAVmXu.output.variable_workflow_021MUTEKSVYN11FuMjcX3mM9O5tmJA9tHQr$",
+                              "variable_value_new": "$activity.definition_activity_021MUTEORLRPZ7LzstKdxum1N0iy0SWScN8.output.response_body$"
+                            }
+                          ]
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_021MUTET55UQN0Dfxts3Y1frabb66TJOsIr",
+                    "name": "Condition Branch",
+                    "title": "Anything else",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_021MUTEORLRPZ7LzstKdxum1N0iy0SWScN8.output.status_code$",
+                        "operator": "ne",
+                        "right_operand": 200
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Anything else",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_021MUTEUBCWRN5IXXWCH4fRmhF7kHJG7MVt",
+                        "name": "Completed",
+                        "title": "Failed",
+                        "type": "logic.completed",
+                        "base_type": "activity",
+                        "properties": {
+                          "completion_type": "failed-completed",
+                          "continue_on_failure": false,
+                          "display_name": "Failed",
+                          "result_message": "Failed to fetch the organization list\n\nStatus code: $activity.definition_activity_021MUTEORLRPZ7LzstKdxum1N0iy0SWScN8.output.status_code$\nResponse body: $activity.definition_activity_021MUTEORLRPZ7LzstKdxum1N0iy0SWScN8.output.response_body$",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_021ULPLGAUYXU0u0SJK4Oy6UpuZmrlOpIXR",
+            "name": "Group",
+            "title": "Use HTTP target with API key",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Use HTTP target with API key",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_021ULPLGAX6UO0NX0XZWK2jC5xH3q0stTk1",
+                "name": "HTTP Request",
+                "title": "Get the organization list",
+                "type": "web-service.http_request",
+                "base_type": "activity",
+                "properties": {
+                  "accept": "application/json",
+                  "action_timeout": 180,
+                  "allow_auto_redirect": true,
+                  "allow_headers_redirect": false,
+                  "content_type": "application/json",
+                  "continue_on_error_status_code": true,
+                  "continue_on_failure": false,
+                  "custom_headers": [
+                    {
+                      "name": "X-Cisco-Meraki-API-Key",
+                      "value": "$workflow.definition_workflow_021MUTEKKIVT02pkFtxvriF9aypR9eAVmXu.local.variable_workflow_021MUTEKSW8TU1hkj1FbQaCGNSIY7tHG4Ig$"
+                    }
+                  ],
+                  "display_name": "Get the organization list",
+                  "method": "GET",
+                  "relative_url": "v1/organizations",
+                  "runtime_user": {
+                    "override_target_runtime_user": false,
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "override_workflow_target": true,
+                    "target_id": "definition_target_021XKCVRMSEEH0KT9EeKJJxhXwgDufpBmZh"
+                  }
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_021ULPLGB07KG00J1t0qRFVOjwMZeaqvKw6",
+                "name": "Condition Block",
+                "title": "Was the request successful?",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Was the request successful?",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_021ULPLGB0PMU564e4HnH32PYS58ucP0YgI",
+                    "name": "Condition Branch",
+                    "title": "200/Success",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_021ULPLGAX6UO0NX0XZWK2jC5xH3q0stTk1.output.status_code$",
+                        "operator": "eq",
+                        "right_operand": 200
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "200/Success",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_021ULPLGB2BRX5KngZn1lUjqJc5vjfURkw7",
+                        "name": "Set Variables",
+                        "title": "Set output variable",
+                        "type": "core.set_multiple_variables",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Set output variable",
+                          "skip_execution": false,
+                          "variables_to_update": [
+                            {
+                              "variable_to_update": "$workflow.definition_workflow_021MUTEKKIVT02pkFtxvriF9aypR9eAVmXu.output.variable_workflow_021MUTEKSVYN11FuMjcX3mM9O5tmJA9tHQr$",
+                              "variable_value_new": "$activity.definition_activity_021MUTEORLRPZ7LzstKdxum1N0iy0SWScN8.output.response_body$"
+                            }
+                          ]
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_021ULPLGB4VFT2nt3HRGF8zO9eRwgFfzsIM",
+                    "name": "Condition Branch",
+                    "title": "Anything else",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_021ULPLGAX6UO0NX0XZWK2jC5xH3q0stTk1.output.status_code$",
+                        "operator": "ne",
+                        "right_operand": 200
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Anything else",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_021ULPLGB5EFE7ay5eNVO5CddJ7I1QUfFYE",
+                        "name": "Completed",
+                        "title": "Failed",
+                        "type": "logic.completed",
+                        "base_type": "activity",
+                        "properties": {
+                          "completion_type": "failed-completed",
+                          "continue_on_failure": false,
+                          "display_name": "Failed",
+                          "result_message": "Failed to fetch the organization list\n\nStatus code: $activity.definition_activity_021ULPLGAX6UO0NX0XZWK2jC5xH3q0stTk1.output.status_code$\nResponse body: $activity.definition_activity_021ULPLGAX6UO0NX0XZWK2jC5xH3q0stTk1.output.response_body$",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "categories": [
+          "category_01FzsThUQ3yXAswxOItEqLAIiGLEPlIt0"
+        ]
+      }
+    }
+  ],
+  "dependent_workflows": [
+    "definition_workflow_021WRIUS0H41T1VL6Qellzxpx4ZFNzPUgEW",
+    "definition_workflow_021MUTEKKIVT02pkFtxvriF9aypR9eAVmXu"
+  ],
+  "module_targets": [
+    {
+      "module_type": "Meraki",
+      "external_id": "securex:ao:meraki"
+    }
+  ]
+}
