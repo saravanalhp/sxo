@@ -24,6 +24,19 @@
         "properties": {
           "value": "",
           "scope": "local",
+          "name": "var3",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_026LNS5P0Z1SB6ezsNR2mXazAUyBCTNmpgJ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
           "name": "VAR2",
           "type": "datatype.string",
           "is_required": false,
