@@ -48,6 +48,20 @@
           "source": "$workflow.definition_workflow_0238X4NHIW2PX3N4YgVTNLlv2N2DEi5APIq.output.started_by$"
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_026LNP9F31JQ215WJjhcMKTn0iphrtE4BzE",
+        "name": "To Lower",
+        "title": "To Lower",
+        "type": "core.string2lower",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Lower",
+          "skip_execution": false,
+          "source": "$activity.definition_activity_0238X57Z9F9Y52pV9hXlXHRhuCHDHqtjA1w.output.uppercase_text$"
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
