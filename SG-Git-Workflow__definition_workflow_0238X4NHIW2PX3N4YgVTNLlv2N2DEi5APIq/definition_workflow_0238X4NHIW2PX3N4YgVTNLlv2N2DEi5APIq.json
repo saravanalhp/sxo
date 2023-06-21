@@ -18,6 +18,19 @@
         },
         "unique_name": "variable_workflow_026LNPS25O7DY1I5KnqVWsb4eUK3yrxhNtx",
         "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "VAR2",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_026LNQBE8NQAQ4F2iKjFcfHtxn2vLUKnvKm",
+        "object_type": "variable_workflow"
       }
     ],
     "properties": {
