@@ -1,0 +1,504 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE",
+    "name": "SG-All-Triggers-7Aug",
+    "title": "SG-All-Triggers-7Aug",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "SG-All-Triggers-7Aug",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_027PKZF2VVXXR2Y8mNlUm6XayrROAjTTHCf",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "test"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "rules": {
+    "ruleevent_027PL02GFEO540WsaegLwgZpMFweWwDkKn0": {
+      "name": "SG-PR25",
+      "title": "SG-PR25",
+      "type": "incident.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "description": "",
+        "disabled": false,
+        "display_name": "SG-PR25",
+        "group_by": true,
+        "rule_type": "rule_event",
+        "stop_subsequent_rules": true,
+        "title": "SG-PR25",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027PL02GFEO540WsaegLwgZpMFweWwDkKn0"
+    },
+    "ruleevent_027PLBU1AP0HH1NeTQA9frvYGI0jSwpHgOe": {
+      "name": "SG-SA-7Aug",
+      "title": "SG-SA-7Aug",
+      "type": "incident.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "description": "",
+        "disabled": false,
+        "display_name": "SG-SA-7Aug",
+        "group_by": false,
+        "rule_type": "rule_event",
+        "title": "SG-SA-7Aug",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027PLBU1AP0HH1NeTQA9frvYGI0jSwpHgOe"
+    },
+    "ruleevent_027PLGKYAW6NF2FnA8A3d50SwrZBAebLeMt": {
+      "name": "SG-ApprovalTask-7Aug",
+      "title": "SG-ApprovalTask-7Aug",
+      "type": "approval_task.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "conditions": {
+          "left_operand": "$output.subject_line$",
+          "operator": "mw",
+          "right_operand": "*SG-ApprovalTask-7Aug*"
+        },
+        "description": "",
+        "disabled": false,
+        "display_name": "SG-ApprovalTask-7Aug",
+        "rule_type": "rule_event",
+        "title": "SG-ApprovalTask-7Aug",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027PLGKYAW6NF2FnA8A3d50SwrZBAebLeMt"
+    },
+    "ruleevent_027PLHBNX2DRT0qFSRWJGZ5NbnzBxE0xp2V": {
+      "name": "SG-Email-Rule-7Aug",
+      "title": "SG-Email-Rule-7Aug",
+      "type": "email.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "action": "read",
+        "conditions": {
+          "left_operand": "$output.subject$",
+          "operator": "eq",
+          "right_operand": "SG-Email-Rule-7Aug-Subject"
+        },
+        "description": "",
+        "disabled": false,
+        "display_name": "SG-Email-Rule-7Aug",
+        "download_attachments": true,
+        "folder": "INBOX",
+        "rule_type": "rule_event",
+        "target_id": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+        "title": "SG-Email-Rule-7Aug",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027PLHBNX2DRT0qFSRWJGZ5NbnzBxE0xp2V"
+    },
+    "ruleevent_027PLLTQ2B91F2A9t7GMlU7sWIXNKjufqkb": {
+      "name": "SG-Email-Rule-7Aug-2",
+      "title": "SG-Email-Rule-7Aug-2",
+      "type": "email.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "action": "read",
+        "conditions": {
+          "left_operand": "$output.subject$",
+          "operator": "eq",
+          "right_operand": "SG-Email-Rule-7Aug-Subject"
+        },
+        "description": "",
+        "disabled": false,
+        "display_name": "SG-Email-Rule-7Aug-2",
+        "download_attachments": true,
+        "folder": "INBOX",
+        "rule_type": "rule_event",
+        "target_id": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+        "title": "SG-Email-Rule-7Aug-2",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027PLLTQ2B91F2A9t7GMlU7sWIXNKjufqkb"
+    },
+    "ruleevent_027PLN5XP7QOI0P6GkOBYCngMwEGiXDpfjc": {
+      "name": "SG-Wh-rule-7Aug",
+      "title": "SG-Wh-rule-7Aug",
+      "type": "webhook.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "description": "",
+        "disabled": false,
+        "display_name": "SG-Wh-rule-7Aug",
+        "rule_type": "rule_event",
+        "title": "SG-Wh-rule-7Aug",
+        "webhook_id": "webhook_027PLN2NKCWKL2lsYwsqUBHc3ZHmsReASC6",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027PLN5XP7QOI0P6GkOBYCngMwEGiXDpfjc"
+    },
+    "ruleschedule_027PLMN7RETX83QteFOE6xbDqEvJQOX4bu9": {
+      "name": "SG-Schedule-Rule-7Aug",
+      "title": "SG-Schedule-Rule-7Aug",
+      "type": "schedule.rule_schedule",
+      "rule_type": "rule_schedule",
+      "base_type": "rule",
+      "object_type": "ruleschedule",
+      "version": "1.0.0",
+      "properties": {
+        "calendar": "calendar_datelist_027PLME38S5LJ3ddzSSHPvibPwfPgdYqwAc",
+        "description": "",
+        "display_name": "SG-Schedule-Rule-7Aug",
+        "interval_hours": 0,
+        "interval_minutes": 1,
+        "number_of_times": 5,
+        "rule_type": "rule_schedule",
+        "starttime": "14:30",
+        "timezone": "America/Chicago",
+        "title": "SG-Schedule-Rule-7Aug",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleschedule_027PLMN7RETX83QteFOE6xbDqEvJQOX4bu9"
+    }
+  },
+  "events": {
+    "event_027PL02GDYPUC7mBFLs6n4XZ44IOQync4fR": {
+      "name": "SG-PR25",
+      "title": "SG-PR25",
+      "type": "incident.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_027PL02GFEO540WsaegLwgZpMFweWwDkKn0",
+      "target_id": "",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "description": "",
+        "disabled": false,
+        "display_name": "SG-PR25",
+        "group_by": true,
+        "rule_type": "rule_event",
+        "stop_subsequent_rules": true,
+        "title": "SG-PR25"
+      },
+      "unique_name": "event_027PL02GDYPUC7mBFLs6n4XZ44IOQync4fR"
+    },
+    "event_027PLBU197ABF3FewdLuguAnfBHSP4pULqu": {
+      "name": "SG-SA-7Aug",
+      "title": "SG-SA-7Aug",
+      "type": "incident.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_027PLBU1AP0HH1NeTQA9frvYGI0jSwpHgOe",
+      "target_id": "",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "disabled": false,
+        "display_name": "SG-SA-7Aug",
+        "group_by": false,
+        "rule_type": "rule_event",
+        "title": "SG-SA-7Aug"
+      },
+      "unique_name": "event_027PLBU197ABF3FewdLuguAnfBHSP4pULqu"
+    },
+    "event_027PLGKYA4MID3zpNkcJ7QB9OYkIH4PTViz": {
+      "name": "SG-ApprovalTask-7Aug",
+      "title": "SG-ApprovalTask-7Aug",
+      "type": "approval_task.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_027PLGKYAW6NF2FnA8A3d50SwrZBAebLeMt",
+      "target_id": "",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "conditions": {
+          "left_operand": "$output.subject_line$",
+          "operator": "mw",
+          "right_operand": "*SG-ApprovalTask-7Aug*"
+        },
+        "disabled": false,
+        "display_name": "SG-ApprovalTask-7Aug",
+        "rule_type": "rule_event",
+        "title": "SG-ApprovalTask-7Aug"
+      },
+      "unique_name": "event_027PLGKYA4MID3zpNkcJ7QB9OYkIH4PTViz"
+    },
+    "event_027PLHBNV23650tOngyjXfpjtqfd91avMDE": {
+      "name": "SG-Email-Rule-7Aug",
+      "title": "SG-Email-Rule-7Aug",
+      "type": "email.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_027PLHBNX2DRT0qFSRWJGZ5NbnzBxE0xp2V",
+      "target_id": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "action": "read",
+        "conditions": {
+          "left_operand": "$output.subject$",
+          "operator": "eq",
+          "right_operand": "SG-Email-Rule-7Aug-Subject"
+        },
+        "disabled": false,
+        "display_name": "SG-Email-Rule-7Aug",
+        "download_attachments": true,
+        "folder": "INBOX",
+        "rule_type": "rule_event",
+        "target_id": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+        "title": "SG-Email-Rule-7Aug"
+      },
+      "unique_name": "event_027PLHBNV23650tOngyjXfpjtqfd91avMDE"
+    },
+    "event_027PLLTPYAIPJ0WtyTSD2rSls6GxPafHHDT": {
+      "name": "SG-Email-Rule-7Aug-2",
+      "title": "SG-Email-Rule-7Aug-2",
+      "type": "email.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_027PLLTQ2B91F2A9t7GMlU7sWIXNKjufqkb",
+      "target_id": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "action": "read",
+        "conditions": {
+          "left_operand": "$output.subject$",
+          "operator": "eq",
+          "right_operand": "SG-Email-Rule-7Aug-Subject"
+        },
+        "disabled": false,
+        "display_name": "SG-Email-Rule-7Aug-2",
+        "download_attachments": true,
+        "folder": "INBOX",
+        "rule_type": "rule_event",
+        "target_id": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+        "title": "SG-Email-Rule-7Aug-2"
+      },
+      "unique_name": "event_027PLLTPYAIPJ0WtyTSD2rSls6GxPafHHDT"
+    },
+    "event_webhook_027PLN5XM86182VzVUAELIDkE5zootFJsgF": {
+      "name": "SG-Wh-rule-7Aug",
+      "title": "SG-Wh-rule-7Aug",
+      "type": "webhook.event",
+      "base_type": "event",
+      "object_type": "event_webhook",
+      "rule_id": "ruleevent_027PLN5XP7QOI0P6GkOBYCngMwEGiXDpfjc",
+      "target_id": "",
+      "webhook_id": "webhook_027PLN2NKCWKL2lsYwsqUBHc3ZHmsReASC6",
+      "version": "1.0.0",
+      "properties": {
+        "disabled": false,
+        "display_name": "SG-Wh-rule-7Aug",
+        "rule_type": "rule_event",
+        "title": "SG-Wh-rule-7Aug",
+        "webhook_id": "webhook_027PLN2NKCWKL2lsYwsqUBHc3ZHmsReASC6"
+      },
+      "unique_name": "event_webhook_027PLN5XM86182VzVUAELIDkE5zootFJsgF"
+    }
+  },
+  "schedules": {
+    "schedule_027PLMN7PT7O166z06go9iUQhhIvME1xn6K": {
+      "unique_name": "schedule_027PLMN7PT7O166z06go9iUQhhIvME1xn6K",
+      "name": "SG-Schedule-Rule-7Aug",
+      "type": "basic.schedule",
+      "base_type": "schedule",
+      "object_type": "schedule",
+      "rule_id": "ruleschedule_027PLMN7RETX83QteFOE6xbDqEvJQOX4bu9",
+      "properties": {
+        "calendar": "calendar_datelist_027PLME38S5LJ3ddzSSHPvibPwfPgdYqwAc",
+        "timezone": "America/Chicago",
+        "starttime": "14:30",
+        "interval_hours": 0,
+        "interval_minutes": 1,
+        "number_of_times": 5,
+        "display_name": "SG-Schedule-Rule-7Aug",
+        "description": ""
+      },
+      "version": "1.0.0"
+    }
+  },
+  "calendars": {
+    "calendar_datelist_027PLME38S5LJ3ddzSSHPvibPwfPgdYqwAc": {
+      "unique_name": "calendar_datelist_027PLME38S5LJ3ddzSSHPvibPwfPgdYqwAc",
+      "name": "7Aug",
+      "title": "7Aug",
+      "base_type": "calendar",
+      "type": "calendar.datelist",
+      "properties": {
+        "date_list": [
+          "2023-08-07"
+        ]
+      },
+      "version": "1.0.0",
+      "object_type": "calendar_datelist"
+    }
+  },
+  "targets": {
+    "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw": {
+      "unique_name": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+      "name": "SG-GraphEndpoint-Jul20",
+      "title": "SG-GraphEndpoint-Jul20",
+      "type": "email.azure_graph_endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_027AFKBVRJOWD6D4aEg8IPEJkTnvPI4Ycj6",
+        "display_name": "SG-GraphEndpoint-Jul20",
+        "host": "https://graph.microsoft.com/v1.0"
+      }
+    }
+  },
+  "runtime_users": {
+    "definition_runtime_user_027AFKBVRJOWD6D4aEg8IPEJkTnvPI4Ycj6": {
+      "unique_name": "definition_runtime_user_027AFKBVRJOWD6D4aEg8IPEJkTnvPI4Ycj6",
+      "name": "SG-OAuth2-Jul20",
+      "title": "SG-OAuth2-Jul20",
+      "type": "runtime_user.oauth2_azure_graph_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "client_id": "09ba4ae0-1db4-40bb-8020-5614f564b103",
+        "display_name": "SG-OAuth2-Jul20",
+        "grant_type": "authorization_code",
+        "scope": "openid offline_access mail.readwrite mail.send user.read",
+        "tenant_id": "f131e32e-2532-4e5f-80fc-f9cd8fcaea27"
+      }
+    }
+  },
+  "webhooks": {
+    "webhook_027PLN2NKCWKL2lsYwsqUBHc3ZHmsReASC6": {
+      "name": "Sg-Wh-7Aug",
+      "title": "Sg-Wh-7Aug",
+      "type": "generic.webhook",
+      "base_type": "webhook",
+      "object_type": "webhook",
+      "version": "1.0.0",
+      "properties": {
+        "display_name": "Sg-Wh-7Aug",
+        "request_content_type": "application/json"
+      },
+      "unique_name": "webhook_027PLN2NKCWKL2lsYwsqUBHc3ZHmsReASC6"
+    }
+  },
+  "wf_rule_trigger": {
+    "triggerevent_027PL02GKJHXX6H7RGGgI5zFT30cPWAYsuT": {
+      "wf_unique_name": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE",
+      "rule_unique_name": "ruleevent_027PL02GFEO540WsaegLwgZpMFweWwDkKn0",
+      "trig_unique_name": "triggerevent_027PL02GKJHXX6H7RGGgI5zFT30cPWAYsuT"
+    },
+    "triggerevent_027PLBU1D6ZTR1HTqwTMXKBuNZPT7m1w62q": {
+      "wf_unique_name": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE",
+      "rule_unique_name": "ruleevent_027PLBU1AP0HH1NeTQA9frvYGI0jSwpHgOe",
+      "trig_unique_name": "triggerevent_027PLBU1D6ZTR1HTqwTMXKBuNZPT7m1w62q"
+    },
+    "triggerevent_027PLGKYC79WX7VzwxTSuCiY20Ti1SSRe17": {
+      "wf_unique_name": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE",
+      "rule_unique_name": "ruleevent_027PLGKYAW6NF2FnA8A3d50SwrZBAebLeMt",
+      "trig_unique_name": "triggerevent_027PLGKYC79WX7VzwxTSuCiY20Ti1SSRe17"
+    },
+    "triggerevent_027PLHBNY6RDT2hDjRCbhvcjoq0xdmwaMj3": {
+      "wf_unique_name": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE",
+      "rule_unique_name": "ruleevent_027PLHBNX2DRT0qFSRWJGZ5NbnzBxE0xp2V",
+      "trig_unique_name": "triggerevent_027PLHBNY6RDT2hDjRCbhvcjoq0xdmwaMj3"
+    },
+    "triggerevent_027PLLTQ4Q4CN7Vqk3FuhVLYKKublEdaDsV": {
+      "wf_unique_name": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE",
+      "rule_unique_name": "ruleevent_027PLLTQ2B91F2A9t7GMlU7sWIXNKjufqkb",
+      "trig_unique_name": "triggerevent_027PLLTQ4Q4CN7Vqk3FuhVLYKKublEdaDsV"
+    },
+    "triggerevent_027PLN5XQYELO0kVykCgO5i6oXaxr0ql7Xn": {
+      "wf_unique_name": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE",
+      "rule_unique_name": "ruleevent_027PLN5XP7QOI0P6GkOBYCngMwEGiXDpfjc",
+      "trig_unique_name": "triggerevent_027PLN5XQYELO0kVykCgO5i6oXaxr0ql7Xn"
+    },
+    "triggerschedule_027PLMN7SVMVN2y6fRotofm6KWq8tDAJwHH": {
+      "wf_unique_name": "definition_workflow_027PKZBDOJJYM64ebCitcg17oBStcNxoPwE",
+      "rule_unique_name": "ruleschedule_027PLMN7RETX83QteFOE6xbDqEvJQOX4bu9",
+      "trig_unique_name": "triggerschedule_027PLMN7SVMVN2y6fRotofm6KWq8tDAJwHH"
+    }
+  }
+}
