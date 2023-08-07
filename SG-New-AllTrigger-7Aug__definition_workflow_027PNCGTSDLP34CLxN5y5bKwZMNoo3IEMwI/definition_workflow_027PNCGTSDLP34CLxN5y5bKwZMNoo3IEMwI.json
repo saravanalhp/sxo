@@ -1,0 +1,309 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_027PNCGTSDLP34CLxN5y5bKwZMNoo3IEMwI",
+    "name": "SG-New-AllTrigger-7Aug",
+    "title": "SG-New-AllTrigger-7Aug",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "SG-New-AllTrigger-7Aug",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_027PNCWXTR1QJ2Pwl5wWDuyRsISH7BDpsVj",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "test"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "rules": {
+    "ruleevent_027PND8NGSCHZ7TpHGGIzUIeecSQevK1ivj": {
+      "name": "SG-PR20-New-7Aug",
+      "title": "SG-PR20-New-7Aug",
+      "type": "incident.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "description": "",
+        "disabled": false,
+        "display_name": "SG-PR20-New-7Aug",
+        "group_by": true,
+        "rule_type": "rule_event",
+        "stop_subsequent_rules": true,
+        "title": "SG-PR20-New-7Aug",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PNCGTSDLP34CLxN5y5bKwZMNoo3IEMwI"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027PND8NGSCHZ7TpHGGIzUIeecSQevK1ivj"
+    },
+    "ruleevent_027PNDGV0MH8M2uDvfAejK4Q6cM2Fo2ic53": {
+      "name": "SG-SA-New-7Aug",
+      "title": "SG-SA-New-7Aug",
+      "type": "incident.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "description": "",
+        "disabled": false,
+        "display_name": "SG-SA-New-7Aug",
+        "group_by": false,
+        "rule_type": "rule_event",
+        "title": "SG-SA-New-7Aug",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PNCGTSDLP34CLxN5y5bKwZMNoo3IEMwI"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027PNDGV0MH8M2uDvfAejK4Q6cM2Fo2ic53"
+    },
+    "ruleevent_027PNFUCAJS110XMIaiillv2kYDxESUWMp1": {
+      "name": "SG-New-EmailRule-7Aug",
+      "title": "SG-New-EmailRule-7Aug",
+      "type": "email.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "action": "read",
+        "description": "",
+        "disabled": false,
+        "display_name": "SG-New-EmailRule-7Aug",
+        "download_attachments": true,
+        "folder": "INBOX",
+        "rule_type": "rule_event",
+        "target_id": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+        "title": "SG-New-EmailRule-7Aug",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PNCGTSDLP34CLxN5y5bKwZMNoo3IEMwI"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027PNFUCAJS110XMIaiillv2kYDxESUWMp1"
+    },
+    "ruleschedule_027PNF31T9RJ45XlCV01C17OYVSijrNosqR": {
+      "name": "SG-ScheduleRule-New-7-9Aug",
+      "title": "SG-ScheduleRule-New-7-9Aug",
+      "type": "schedule.rule_schedule",
+      "rule_type": "rule_schedule",
+      "base_type": "rule",
+      "object_type": "ruleschedule",
+      "version": "1.0.0",
+      "properties": {
+        "calendar": "calendar_datelist_027PNERPUB3EX1RLEZiTe0obLFkLHSfV3Lj",
+        "description": "",
+        "display_name": "SG-ScheduleRule-New-7-9Aug",
+        "interval_hours": 0,
+        "interval_minutes": 1,
+        "number_of_times": 10,
+        "rule_type": "rule_schedule",
+        "starttime": "15:55",
+        "timezone": "America/Chicago",
+        "title": "SG-ScheduleRule-New-7-9Aug",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PNCGTSDLP34CLxN5y5bKwZMNoo3IEMwI"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleschedule_027PNF31T9RJ45XlCV01C17OYVSijrNosqR"
+    }
+  },
+  "events": {
+    "event_027PND8NFTXFQ7YpaXSFUftRuJfiWhY4X8N": {
+      "name": "SG-PR20-New-7Aug",
+      "title": "SG-PR20-New-7Aug",
+      "type": "incident.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_027PND8NGSCHZ7TpHGGIzUIeecSQevK1ivj",
+      "target_id": "",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "disabled": false,
+        "display_name": "SG-PR20-New-7Aug",
+        "group_by": true,
+        "rule_type": "rule_event",
+        "stop_subsequent_rules": true,
+        "title": "SG-PR20-New-7Aug"
+      },
+      "unique_name": "event_027PND8NFTXFQ7YpaXSFUftRuJfiWhY4X8N"
+    },
+    "event_027PNDGUZQR4Z4lrW0c8C1eGUzAvcxKRVrO": {
+      "name": "SG-SA-New-7Aug",
+      "title": "SG-SA-New-7Aug",
+      "type": "incident.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_027PNDGV0MH8M2uDvfAejK4Q6cM2Fo2ic53",
+      "target_id": "",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "disabled": false,
+        "display_name": "SG-SA-New-7Aug",
+        "group_by": false,
+        "rule_type": "rule_event",
+        "title": "SG-SA-New-7Aug"
+      },
+      "unique_name": "event_027PNDGUZQR4Z4lrW0c8C1eGUzAvcxKRVrO"
+    },
+    "event_027PNFUC6L86C45jpKUuOvFdt6RK0UJ4Qvq": {
+      "name": "SG-New-EmailRule-7Aug",
+      "title": "SG-New-EmailRule-7Aug",
+      "type": "email.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_027PNFUCAJS110XMIaiillv2kYDxESUWMp1",
+      "target_id": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "action": "read",
+        "disabled": false,
+        "display_name": "SG-New-EmailRule-7Aug",
+        "download_attachments": true,
+        "folder": "INBOX",
+        "rule_type": "rule_event",
+        "target_id": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+        "title": "SG-New-EmailRule-7Aug"
+      },
+      "unique_name": "event_027PNFUC6L86C45jpKUuOvFdt6RK0UJ4Qvq"
+    }
+  },
+  "schedules": {
+    "schedule_027PNF31RVTFA71PhSTHzU7pbw1EiavtqOd": {
+      "unique_name": "schedule_027PNF31RVTFA71PhSTHzU7pbw1EiavtqOd",
+      "name": "SG-ScheduleRule-New-7-9Aug",
+      "type": "basic.schedule",
+      "base_type": "schedule",
+      "object_type": "schedule",
+      "rule_id": "ruleschedule_027PNF31T9RJ45XlCV01C17OYVSijrNosqR",
+      "properties": {
+        "calendar": "calendar_datelist_027PNERPUB3EX1RLEZiTe0obLFkLHSfV3Lj",
+        "timezone": "America/Chicago",
+        "starttime": "15:55",
+        "interval_hours": 0,
+        "interval_minutes": 1,
+        "number_of_times": 10,
+        "display_name": "SG-ScheduleRule-New-7-9Aug",
+        "description": ""
+      },
+      "version": "1.0.0"
+    }
+  },
+  "calendars": {
+    "calendar_datelist_027PNERPUB3EX1RLEZiTe0obLFkLHSfV3Lj": {
+      "unique_name": "calendar_datelist_027PNERPUB3EX1RLEZiTe0obLFkLHSfV3Lj",
+      "name": "7-9Aug",
+      "title": "7-9Aug",
+      "base_type": "calendar",
+      "type": "calendar.datelist",
+      "properties": {
+        "date_list": [
+          "2023-08-07",
+          "2023-08-08",
+          "2023-08-09"
+        ]
+      },
+      "version": "1.0.0",
+      "object_type": "calendar_datelist"
+    }
+  },
+  "targets": {
+    "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw": {
+      "unique_name": "definition_target_027AFKGLLDQQ107M3VxiRBOeF0Pa1kJkSAw",
+      "name": "SG-GraphEndpoint-Jul20",
+      "title": "SG-GraphEndpoint-Jul20",
+      "type": "email.azure_graph_endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_027AFKBVRJOWD6D4aEg8IPEJkTnvPI4Ycj6",
+        "display_name": "SG-GraphEndpoint-Jul20",
+        "host": "https://graph.microsoft.com/v1.0"
+      }
+    }
+  },
+  "runtime_users": {
+    "definition_runtime_user_027AFKBVRJOWD6D4aEg8IPEJkTnvPI4Ycj6": {
+      "unique_name": "definition_runtime_user_027AFKBVRJOWD6D4aEg8IPEJkTnvPI4Ycj6",
+      "name": "SG-OAuth2-Jul20",
+      "title": "SG-OAuth2-Jul20",
+      "type": "runtime_user.oauth2_azure_graph_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "client_id": "09ba4ae0-1db4-40bb-8020-5614f564b103",
+        "display_name": "SG-OAuth2-Jul20",
+        "grant_type": "authorization_code",
+        "scope": "openid offline_access mail.readwrite mail.send user.read",
+        "tenant_id": "f131e32e-2532-4e5f-80fc-f9cd8fcaea27"
+      }
+    }
+  },
+  "wf_rule_trigger": {
+    "triggerevent_027PND8NL1YJZ2laTWhtyFCHFAntLn1MuyH": {
+      "wf_unique_name": "definition_workflow_027PNCGTSDLP34CLxN5y5bKwZMNoo3IEMwI",
+      "rule_unique_name": "ruleevent_027PND8NGSCHZ7TpHGGIzUIeecSQevK1ivj",
+      "trig_unique_name": "triggerevent_027PND8NL1YJZ2laTWhtyFCHFAntLn1MuyH"
+    },
+    "triggerevent_027PNDGV20QYI4ADJGFfErQyPdZbdheQA8s": {
+      "wf_unique_name": "definition_workflow_027PNCGTSDLP34CLxN5y5bKwZMNoo3IEMwI",
+      "rule_unique_name": "ruleevent_027PNDGV0MH8M2uDvfAejK4Q6cM2Fo2ic53",
+      "trig_unique_name": "triggerevent_027PNDGV20QYI4ADJGFfErQyPdZbdheQA8s"
+    },
+    "triggerevent_027PNFUCCWA2X46hV8Qb4gGJfthNcJWkusE": {
+      "wf_unique_name": "definition_workflow_027PNCGTSDLP34CLxN5y5bKwZMNoo3IEMwI",
+      "rule_unique_name": "ruleevent_027PNFUCAJS110XMIaiillv2kYDxESUWMp1",
+      "trig_unique_name": "triggerevent_027PNFUCCWA2X46hV8Qb4gGJfthNcJWkusE"
+    },
+    "triggerschedule_027PNF31UM12K3AiObZGhJLWwqmx5Hyxam5": {
+      "wf_unique_name": "definition_workflow_027PNCGTSDLP34CLxN5y5bKwZMNoo3IEMwI",
+      "rule_unique_name": "ruleschedule_027PNF31T9RJ45XlCV01C17OYVSijrNosqR",
+      "trig_unique_name": "triggerschedule_027PNF31UM12K3AiObZGhJLWwqmx5Hyxam5"
+    }
+  }
+}
